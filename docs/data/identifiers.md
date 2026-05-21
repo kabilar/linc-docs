@@ -4,8 +4,8 @@
 | ------------------- | -------------------- | ------- |
 | I80                 | Ha1                  | Human   |
 | I74                 | Hb1                  | Human   |
+| I71                 | Hb2                  | Human   |
 | I35                 | Pending              | Human   |
-| I71                 | Pending              | Human   |
 | EXC004              | Internal only        | Human   |
 | EXC025              | Internal only        | Human   |
 | I58                 | Internal only        | Human   |
