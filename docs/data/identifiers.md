@@ -8,7 +8,7 @@
 | I35                                                          | Pending              | Human   |
 | EXC004                                                       | Internal only        | Human   |
 | EXC025                                                       | Internal only        | Human   |
-| I58                                                          | Internal only        | Human   |
+| I58                                                          | Hb0                  | Human   |
 | S45                                                          | Internal only        | Human   |
 | MF283                                                        | M1                   | Macaque |
 | MF168                                                        | Pending              | Macaque |
