@@ -1,0 +1,13 @@
+/* Mark nav links that point to an external site with a small arrow */
+.md-nav__link[href^="http://"]::after,
+.md-nav__link[href^="https://"]::after {
+  content: "";
+  flex-shrink: 0;
+  width: 0.75em;
+  height: 0.75em;
+  align-self: center;
+  background-color: currentColor;
+  opacity: 0.6;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7M5 5v14h14v-7h-2v5H7V7h5V5H5z"/></svg>') center / contain no-repeat;
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7M5 5v14h14v-7h-2v5H7V7h5V5H5z"/></svg>') center / contain no-repeat;
+}
