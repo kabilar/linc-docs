@@ -51,6 +51,8 @@ nav:
   - Data:
     - Identifiers: "data/identifiers.md"
     - HiP-CT: "data/hipct.md"
+  - Workflows:
+    - Macaque PS-OCT pipeline: "workflows/macaque-pipeline.md"
   - Design Docs:
     - Visualize private S3 assets with Neuroglancer: "neuroglancer-private-assets.md"
   - Health status: https://status.lincbrain.org
@@ -60,6 +62,16 @@ nav:
 # List of extensions
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.magiclink

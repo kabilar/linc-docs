@@ -6,3 +6,223 @@
   font-size: 0.85em;
   opacity: 0.7;
 }
+
+/* ------------------------------------------------------------------ */
+/* Workflow / protocol pages                                          */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --linc-accent: #5e35b1;
+  --linc-tint: #ede7f6;
+  --linc-qc: #fb8c00;
+  --md-admonition-icon--qc: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12m-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8Z"/></svg>');
+}
+
+[data-md-color-scheme="slate"] {
+  --linc-accent: #b39ddb;
+  --linc-tint: rgba(179, 157, 219, 0.14);
+}
+
+/* Hero banner */
+.md-typeset .linc-hero {
+  position: relative;
+  margin: 0 0 1.6rem;
+  padding: 1.8rem 1.8rem 1.4rem;
+  border-radius: 0.8rem;
+  color: #fff;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.2), transparent 42%),
+    radial-gradient(circle at 10% 110%, rgba(224, 64, 251, 0.35), transparent 45%),
+    linear-gradient(135deg, #311b92 0%, #5e35b1 55%, #8e24aa 100%);
+  box-shadow: 0 0.5rem 1.4rem rgba(49, 27, 146, 0.25);
+  overflow: hidden;
+}
+
+.md-typeset .linc-hero h1 {
+  margin: 0.3rem 0 0.6rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset .linc-hero h1 .headerlink {
+  display: none;
+}
+
+.md-typeset .linc-hero__eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.md-typeset .linc-hero__lead {
+  max-width: 44rem;
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.md-typeset .linc-hero a.md-button {
+  margin: 0.4rem 0.4rem 0 0;
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+.md-typeset .linc-hero a.md-button:hover,
+.md-typeset .linc-hero a.md-button:focus {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.md-typeset .linc-hero a.md-button--primary {
+  border-color: #fff;
+  background-color: #fff;
+  color: #4527a0;
+}
+
+.md-typeset .linc-hero a.md-button--primary:hover,
+.md-typeset .linc-hero a.md-button--primary:focus {
+  background-color: #ede7f6;
+  color: #311b92;
+}
+
+/* Pills inside the hero */
+.md-typeset .linc-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.8rem;
+}
+
+.md-typeset .linc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.md-typeset .linc-pill--status::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #ffca28;
+  box-shadow: 0 0 0 0.15rem rgba(255, 202, 40, 0.35);
+}
+
+/* Key numbers */
+.md-typeset .linc-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.2rem, 1fr));
+  gap: 0.6rem;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.md-typeset .linc-stat {
+  padding: 0.75rem 0.9rem;
+  border-left: 0.22rem solid var(--linc-accent);
+  border-radius: 0.5rem;
+  background: var(--linc-tint);
+}
+
+.md-typeset .linc-stat strong {
+  display: block;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  color: var(--linc-accent);
+}
+
+.md-typeset .linc-stat span {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Stage metadata chips under section headings */
+.md-typeset .linc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: -0.2rem 0 1.1rem;
+}
+
+.md-typeset .linc-meta > p {
+  display: contents;
+}
+
+.md-typeset .linc-meta > span,
+.md-typeset .linc-meta > p > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: var(--linc-tint);
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: var(--linc-accent);
+}
+
+/* Card icons */
+.md-typeset .grid.cards .lg {
+  color: var(--linc-accent);
+}
+
+/* Placeholder values awaiting confirmation */
+.md-typeset .tbd {
+  padding: 0 0.3em;
+  border: 1px dashed var(--linc-qc);
+  border-radius: 0.25em;
+  background: rgba(251, 140, 0, 0.1);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* QC gate admonition */
+.md-typeset .admonition.qc,
+.md-typeset details.qc {
+  border-color: var(--linc-qc);
+}
+
+.md-typeset .qc > .admonition-title,
+.md-typeset .qc > summary {
+  background-color: rgba(251, 140, 0, 0.1);
+}
+
+.md-typeset .qc > .admonition-title::before,
+.md-typeset .qc > summary::before {
+  background-color: var(--linc-qc);
+  -webkit-mask-image: var(--md-admonition-icon--qc);
+  mask-image: var(--md-admonition-icon--qc);
+}
+
+.md-typeset .qc table:not([class]) {
+  font-size: 0.68rem;
+}
+
+/* QC outcome icons */
+.md-typeset .qc-pass { color: #43a047; }
+.md-typeset .qc-warn { color: #fbc02d; }
+.md-typeset .qc-redo { color: #1e88e5; }
+.md-typeset .qc-fail { color: #e53935; }
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .linc-hero {
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+    padding: 1.4rem 1rem 1.1rem;
+    border-radius: 0;
+  }
+}
